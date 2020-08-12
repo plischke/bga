@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\backend",
+    "\\backend\\bga-app",
+    "\\backend\\bga-app\\bga-app",
+    "\\backend\\bga-app\\bga-app\\Controllers",
+    "\\backend\\bga-app\\bga-app\\models",
+    "\\bga-app"
+  ],
+  "SelectedNode": "\\backend\\bga-app\\bga-app\\Controllers\\ValuesController.cs",
+  "PreviewInSolutionExplorer": false
+}

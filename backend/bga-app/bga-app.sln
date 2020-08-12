@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bga-app", "bga-app\bga-app.csproj", "{873ABA46-30DA-4BC6-939D-C2DE9052E52F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{873ABA46-30DA-4BC6-939D-C2DE9052E52F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{873ABA46-30DA-4BC6-939D-C2DE9052E52F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{873ABA46-30DA-4BC6-939D-C2DE9052E52F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{873ABA46-30DA-4BC6-939D-C2DE9052E52F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F379C1E9-1300-4612-9EA5-9B7B9B423ABD}
+	EndGlobalSection
+EndGlobal
