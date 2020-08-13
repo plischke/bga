@@ -1,5 +1,5 @@
 <template>
-    <v-simple-table class="elevation-1" fixed-header height=300 >
+    <v-simple-table class="elevation-1" fixed-header height=300>
     <template v-slot:default>
     <thead>
         <tr>
@@ -8,7 +8,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr v-for="course in courses" :key="course.courseID">
+        <tr class="text-center" v-for="course in courses" :key="course.courseID">
         <td>{{ course.courseName }}</td>
         <td>{{ course.par }}</td>
         </tr>

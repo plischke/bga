@@ -4,6 +4,7 @@
       color="indigo darken-2"
       dense
       dark
+      fixed
     >
       <v-app-bar-nav-icon></v-app-bar-nav-icon>
 

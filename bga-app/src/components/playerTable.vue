@@ -7,7 +7,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr v-for="player in players" :key="player.playerId">
+            <tr class="text-center" v-for="player in players" :key="player.playerId">
                 <td>{{player.firstName}}</td>
                 <td>{{player.lastName}}</td>
                 <td>{{player.avg}}</td>

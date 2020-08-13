@@ -1,15 +1,17 @@
 <template>
-
+<v-card
+    color="indigo darken-2"
+    >
         <v-container fluid>
             <v-row>
-                <v-col>
-                <v-card max-width="800">
+                <v-col align="center">
+                <v-card max-width="800" color="orange darken-4">
                     <v-card-title>All BGA Players</v-card-title>
                 <playerTable/>
                 </v-card>
             </v-col>
-            <v-col>
-                <v-card>
+            <v-col align="center">
+                <v-card max-width="800" color="orange darken-4">
                     <v-card-title>All BGA Sanctioned Courses</v-card-title>
                 <courseTable/>
                 </v-card>
@@ -24,7 +26,7 @@
             </v-col>
             </v-row>
         </v-container>
-
+</v-card>
 </template>
 
 <script>

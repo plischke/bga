@@ -2,8 +2,10 @@
   <v-app id="app">
     <navbar />
     <v-parallax
-      height="800"
-      src="./assets/background.jpg">
+      height="690"
+      src="./assets/background.jpg"
+      fixed
+      >
     </v-parallax>
     <mainPage/>
   </v-app>
