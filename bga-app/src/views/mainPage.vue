@@ -30,9 +30,9 @@
 </template>
 
 <script>
-    import playerTable from './playerTable.vue'
-    import courseTable from './courseTable.vue'
-    import averageScoreTable from './averageScoreTable.vue'
+    import playerTable from '../components/playerTable.vue'
+    import courseTable from '../components/courseTable.vue'
+    import averageScoreTable from '../components/averageScoreTable.vue'
     export default {
         name:'mainPage',
         components:{
