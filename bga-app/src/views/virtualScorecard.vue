@@ -8,11 +8,6 @@
             outlined
             v-model="selectedCourse">
             </v-select>
-            <v-row>
-            <v-col>Hole</v-col>
-            <v-col>1</v-col>
-            <v-col>2</v-col>
-            </v-row>
     </v-card>
 </template>
 <script>
