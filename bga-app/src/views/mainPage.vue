@@ -1,4 +1,11 @@
 <template>
+<div>
+    <v-parallax
+      height="690"
+      src="../assets/background.jpg"
+      fixed
+      >
+    </v-parallax>
 <v-card
     color="indigo darken-2"
     >
@@ -27,6 +34,7 @@
             </v-row>
         </v-container>
 </v-card>
+</div>
 </template>
 
 <script>
