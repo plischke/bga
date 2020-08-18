@@ -60,9 +60,41 @@ namespace bga_app.Controllers
 
         // GET api/<ValuesController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public List<CourseScorecard> Get(int id)
         {
-            return "value";
+            DBConnection conn = new DBConnection();
+            string connStr = conn.getdbconStr();
+            List<CourseScorecard> scorecard = new List<CourseScorecard>();
+            using (MySqlConnection con = new MySqlConnection(connStr))
+            {
+                con.Open();
+                string cid = id.ToString();
+                string query = "SELECT * FROM course as a INNER JOIN(SELECT* FROM hole)as b ON a.courseID = b.courseID  WHERE a.courseID = @cid";
+                using (MySqlCommand cmd = new MySqlCommand(query, con))
+                {
+                    cmd.Parameters.Add("@cid", MySqlDbType.Int32);
+                    cmd.Parameters["@cid"].Value = id;
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                CourseScorecard cs = new CourseScorecard();
+                                cs.courseID = reader.GetString(0);
+                                cs.courseName = reader.GetString(1);
+                                cs.coursePar = reader.GetString(2);
+                                cs.holeID = reader.GetString(3);
+                                cs.par = reader.GetString(4);
+                                cs.yardage = reader.GetString(5);
+                                cs.description = reader.GetString(7);
+                                scorecard.Add(cs);
+                            }
+                        }
+                    }
+                }
+            }
+            return scorecard;
         }
 
         // POST api/<ValuesController>

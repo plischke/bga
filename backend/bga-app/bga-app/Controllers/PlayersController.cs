@@ -80,6 +80,8 @@ namespace bga_app.Controllers
                 string query = "SELECT * FROM player WHERE playerId = @pid";
                 using(MySqlCommand cmd = new MySqlCommand(query, con))
                 {
+                    cmd.Parameters.Add("@pid", MySqlDbType.Int32);
+                    cmd.Parameters["@pid"].Value = id;
                     using(MySqlDataReader reader = cmd.ExecuteReader())
                     {
                         if (reader.HasRows)
