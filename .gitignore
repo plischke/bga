@@ -91,3 +91,5 @@ artifacts/
 *.user
 *.userosscache
 *.sln.docstates
+bga-app/public/ajaxfile.php
+bga-app/public/config.php
