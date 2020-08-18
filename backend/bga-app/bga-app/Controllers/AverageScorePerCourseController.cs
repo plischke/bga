@@ -14,17 +14,20 @@ using Newtonsoft.Json;
 
 namespace bga_app.Controllers
 {
+
     [Route("api/[controller]")]
     [ApiController]
     public class AverageScorePerCourseController : ControllerBase
     {
         // GET: api/<ValuesController>
-        private string connStr = string.Format("Server=localhost; database={0}; UID=root; password=tylerp93", "mydb");
+        
         [HttpGet]
         public List<AvgScorePerPlayerPerCourse> Get()
         {
+            DBConnection conn = new DBConnection();
+            string connStr = conn.getdbconStr();
             List<AvgScorePerPlayerPerCourse> score = new List<AvgScorePerPlayerPerCourse>();
-            //var dbCon = DBConnection.Instance();
+
             using (MySqlConnection con = new MySqlConnection(connStr))
             {
                 con.Open();

@@ -18,11 +18,13 @@ namespace bga_app.Controllers
     [ApiController]
     public class CourseScorecardController : ControllerBase
     {
-        private string connStr = string.Format("Server=localhost; database={0}; UID=root; password=tylerp93", "mydb");
+        
         // GET: api/<ValuesController>
         [HttpGet]
         public List<CourseScorecard> Get()
         {
+            DBConnection conn = new DBConnection();
+            string connStr = conn.getdbconStr();
             List<CourseScorecard> scoreCard = new List<CourseScorecard>();
             using (MySqlConnection con = new MySqlConnection(connStr))
             {

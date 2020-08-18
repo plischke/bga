@@ -20,10 +20,12 @@ namespace bga_app.Controllers
     {
         // GET: api/<ValuesController>
         //Retrieve a list of all courses
-        private string connStr = string.Format("Server=localhost; database={0}; UID=root; password=tylerp93", "mydb");
+        
         [HttpGet]
         public List<Course> Get()
         {
+            DBConnection conn = new DBConnection();
+            string connStr = conn.getdbconStr();
             List<Course> courses = new List<Course>();
             //var dbCon = DBConnection.Instance();
             using (MySqlConnection con = new MySqlConnection(connStr))

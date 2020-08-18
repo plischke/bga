@@ -23,10 +23,12 @@ namespace bga_app.Controllers
     {
         // GET: api/<ValuesController>
         // Retrieve a list of all players with their average scores
-        private string connStr = string.Format("Server=localhost; database={0}; UID=root; password=tylerp93", "mydb");
+        
         [HttpGet]
         public List<Player> Get()
         {
+            DBConnection conn = new DBConnection();
+            string connStr = conn.getdbconStr();
             List<Player> players = new List<Player>();
             using (MySqlConnection con = new MySqlConnection(connStr))
             {
@@ -66,27 +68,35 @@ namespace bga_app.Controllers
         // GET api/<ValuesController>/5
         // Retrieve player by id
         [HttpGet("{id}")]
-        public string Get(int id)
+        public List<Player> Get(int id)
         {
-            var dbCon = DBConnection.Instance();
-            Player p = new Player();
-            if (dbCon.IsConnect())
+            DBConnection conn = new DBConnection();
+            string connStr = conn.getdbconStr();
+            List<Player> player = new List<Player>();
+            using(MySqlConnection con = new MySqlConnection(connStr))
             {
+                con.Open();
                 string pid = id.ToString();
                 string query = "SELECT * FROM player WHERE playerId = @pid";
-                var cmd = new MySqlCommand(query, dbCon.Connection);
-                cmd.Parameters.AddWithValue("@pid", pid);
-                var reader = cmd.ExecuteReader();
-                while (reader.Read())
+                using(MySqlCommand cmd = new MySqlCommand(query, con))
                 {
-                    p.firstName = reader.GetString(1);
-                    p.lastName = reader.GetString(2);
+                    using(MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                Player p = new Player();
+                                p.firstName = reader.GetString(1);
+                                p.lastName = reader.GetString(2);
+                                player.Add(p);
+                            }
+                        }
+                    }
                 }
-                dbCon.Close();
             }
-            string data = JsonConvert.SerializeObject(p);
 
-            return data;
+            return player;
         }
 
         // POST api/<ValuesController>
