@@ -93,3 +93,5 @@ artifacts/
 *.sln.docstates
 bga-app/public/ajaxfile.php
 bga-app/public/config.php
+bgaBackend.mwb.bak
+header photo.psd
