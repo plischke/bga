@@ -1,5 +1,5 @@
 <template>
-    <v-card>
+        <v-card>
         <v-card-title>Virtual scorecard</v-card-title>
         <v-select
             :items="items"
@@ -13,12 +13,12 @@
             </v-select>
             <v-container>
                 <h1>{{selectedCourse}}</h1>
-        <v-simple-table class="elevation-1" fixed-header height=200>
+        <v-simple-table class="elevation-4" fixed-header height=200>
             <template v-slot:default>
             <thead>
                 <tr>
                     <th> Hole </th>
-                    <th class="text-center"  v-for="course in courseData" :key="course.holeID">{{course.description}}</th>
+                    <th class="text-center" v-for="course in courseData" :key="course.holeID">{{course.description}}</th>
                 </tr>
                 <tr>
                     <th> Distance </th>
@@ -284,6 +284,7 @@
         </v-form>
         </v-container>
     </v-card>
+
 </template>
 <script>
 import axios from 'axios'
@@ -405,3 +406,8 @@ export default {
     }
 }
 </script>
+<style>
+#app{
+    background-color: rgb(115, 114, 128);
+}
+</style>

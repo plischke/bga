@@ -13,7 +13,7 @@
     </v-container>
     <v-row  v-if="this.selectedTable === 'Tuxedo'">
         <v-col>
-            <v-card>
+            <v-card color="teal lighten-1">
                 <v-card-title>{{selectedTable}}</v-card-title>
                 <averageScoreTuxedo/>
             </v-card>
@@ -21,7 +21,7 @@
     </v-row>
     <v-row v-if="this.selectedTable === 'Canoe Club'">
         <v-col>
-            <v-card>
+            <v-card color="green">
                 <v-card-title>{{selectedTable}}</v-card-title>
                 <averageScoreCC/>
             </v-card>
@@ -29,7 +29,7 @@
     </v-row>
     <v-row v-if="this.selectedTable === 'Sandy Hook'">
         <v-col>
-            <v-card>
+            <v-card color="yellow darken-3">
                 <v-card-title>{{selectedTable}}</v-card-title>
                 <averageScoreSandyHook/>
             </v-card>
@@ -37,7 +37,7 @@
     </v-row>
     <v-row v-if="this.selectedTable === 'John Blumberg'">
         <v-col>
-            <v-card>
+            <v-card color="blue-grey lighten-1">
                 <v-card-title>{{selectedTable}}</v-card-title>
                 <averageScoreJohnBlum/>
             </v-card>
@@ -45,7 +45,7 @@
     </v-row>
     <v-row v-if="this.selectedTable === 'Assiniboine Golf Club'">
         <v-col>
-            <v-card>
+            <v-card color="brown lighten-1">
                 <v-card-title>{{selectedTable}}</v-card-title>
                 <averageScoreAssiniboine/>
             </v-card>
@@ -54,7 +54,7 @@
     <div  v-if="this.selectedTable === 'All'">
     <v-row>
         <v-col>
-            <v-card>
+            <v-card color="teal lighten-1">
                 <v-card-title>Tuxedo</v-card-title>
             <averageScoreTuxedo/>
             </v-card>
@@ -62,13 +62,13 @@
     </v-row>
     <v-row>
         <v-col>
-            <v-card>
+            <v-card color="green">
                 <v-card-title>Canoe Club</v-card-title>
                 <averageScoreCC/>
             </v-card>
         </v-col>
         <v-col>
-            <v-card>
+            <v-card color="yellow darken-3">
                 <v-card-title>Sandy Hook</v-card-title>
             <averageScoreSandyHook/>
             </v-card>
@@ -76,13 +76,13 @@
     </v-row>
     <v-row>
         <v-col>
-            <v-card>
+            <v-card color="blue-grey lighten-1">
                 <v-card-title>John Blumberg</v-card-title>
             <averageScoreJohnBlum/>
             </v-card>
         </v-col>
         <v-col>
-            <v-card>
+            <v-card color="brown lighten-1">
                 <v-card-title>Assiniboine Golf Club</v-card-title>
             <averageScoreAssiniboine/>
             </v-card>

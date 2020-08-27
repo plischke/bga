@@ -1,11 +1,18 @@
 <template>
 <div>
-    <v-parallax
-      height="690"
-      src="../assets/background.jpg"
-      fixed
-      >
-    </v-parallax>
+    <v-carousel
+    cycle
+    height="800"
+    show-arrows-on-hover
+    hide-delimiter-background
+    >
+        <v-carousel-item
+        v-for="(item, i) in items"
+        :key="i"
+        :src="item.src"
+        >
+    </v-carousel-item>
+  </v-carousel>
 <v-card
     color="indigo darken-2"
     >
@@ -47,6 +54,15 @@
             playerTable,
             courseTable,
             averageScoreTable
+        },
+        data(){
+            return{
+                items: [
+                    {
+                        src: require("../assets/background.jpg")
+                    },
+                ]
+            }
         }
     }
 </script>
