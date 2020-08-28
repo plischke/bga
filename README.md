@@ -2,10 +2,10 @@
 Golf webapp that displays scores and averages of players and courses and allows for score uploads. Made for fun with mySQL, C#, and vueJS (continually a work in progress)
 
 ### Main page view
-![Alt text](/bga-app/src/assets/screenshot1.jpg?raw=true "Optional Title")
+![Alt text](/bga-app/src/assets/screenshot1.jpg?raw=true)
 
 ### Virtual Scorecard
-![Alt text](/bga-app/src/assets/screenshot2.jpg?raw=true "Optional Title")
+![Alt text](/bga-app/src/assets/screenshot2.jpg?raw=true)
 
 ## Setup
 
