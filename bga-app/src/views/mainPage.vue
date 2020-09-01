@@ -53,7 +53,7 @@
         components:{
             playerTable,
             courseTable,
-            averageScoreTable
+            averageScoreTable,
         },
         data(){
             return{
