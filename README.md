@@ -7,6 +7,12 @@ Golf webapp that displays scores and averages of players and courses and allows 
 ### Virtual Scorecard
 ![Alt text](/bga-app/src/assets/screenshot2.jpg?raw=true)
 
+## Future Enhancements
+* Player profile creation
+  * Login page and handling of credentials
+* Course Adder
+  * Ability to for players to add courses that aren't currently listed
+
 ## Setup
 
 Clone the repo and in the root directory run ``` npm install ``` to install the dependencies. You will also need to create a dbConnection.cs file in C# to store the connection string and credentials for your MySQL db.
