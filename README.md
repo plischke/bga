@@ -11,7 +11,7 @@ Golf webapp that displays scores and averages of players and courses and allows 
 * Player profile creation
   * Login page and handling of credentials
 * Course Adder
-  * Ability to for players to add courses that aren't currently listed
+  * Ability for players to add courses that aren't currently listed
 
 ## Setup
 
